@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App.tsx";
 import Perfil from "./perfil/Perfil.tsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
