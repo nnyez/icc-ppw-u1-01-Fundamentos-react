@@ -25,7 +25,6 @@ function App() {
       <button onClick={() => contar(1)}>Contar</button>
       <button onClick={() => contar(-1)}>Restar</button>
       <button onClick={() => restore(0)}>Reiniciar</button>
-      <NavLink to={'/perfil'}>Ir a Perfil</NavLink>
     </>
   );
 }

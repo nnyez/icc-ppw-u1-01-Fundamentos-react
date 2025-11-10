@@ -1,25 +1,37 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import Perfil from "./perfil/Perfil.tsx";
 
 import { createHashRouter, RouterProvider } from "react-router";
+
+import MainLayout from "./layout.tsx";
+import Proyectos from "./proyectos/Proyectos.tsx";
+import App from "./App.tsx";
+import Perfil from "./perfil/Perfil.tsx";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/perfil",
-    element: <Perfil />,
+    Component: MainLayout,
+    children: [
+      {
+        index: true,
+        Component: App,
+      },
+      {
+        path: "/perfil",
+        Component:Perfil,
+      },
+      {
+        path: "/trabajos",
+        Component: Proyectos
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <h1>Main tsx</h1>
     <RouterProvider router={router} />
   </StrictMode>
 );

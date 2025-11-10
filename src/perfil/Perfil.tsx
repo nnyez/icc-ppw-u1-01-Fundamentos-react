@@ -44,7 +44,6 @@ function Perfil() {
       <button onClick={() => change()}>Cambiar datos</button>
       <button onClick={() => setAge(18)}>Cambiar Edad</button>
       <button onClick={() => restore()}>Reinciar</button>
-      <NavLink to={'/'}>Ir a Home</NavLink>
       
     </div>
   );
