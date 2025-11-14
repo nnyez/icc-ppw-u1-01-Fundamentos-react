@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type proyectoInt from "../lib/proyecto";
+import type proyectoInt from "../lib/types/proyecto";
 
 export default function Proyectos() {
   const proyectosList: proyectoInt[] = [
@@ -47,21 +47,23 @@ export default function Proyectos() {
   };
   return (
     <div>
-      <h1>Proyectos</h1>
-      <h2>Agregar Proyecto</h2>
-      <h3>Proyecto a agregar {title}</h3>
       <div>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <button onClick={() => addValue()}>Agregar</button>
+        <h1>Proyectos</h1>
+        <h2>Agregar Proyecto</h2>
+        <h3>Proyecto a agregar {title}</h3>
+        <div>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <button onClick={() => addValue()}>Agregar</button>
+        </div>
       </div>
 
       <div>

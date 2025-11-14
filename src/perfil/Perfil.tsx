@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Perfil.css";
-import { NavLink } from "react-router";
 
 function Perfil() {
   const [name, setName] = useState("Geovanni");
